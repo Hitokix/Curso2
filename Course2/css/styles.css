@@ -14,16 +14,6 @@ body {
     color: white;
     text-shadow: 2px 2px #02010A;
     float: left;
-    padding-left: 20px;
-}
-
-#header #main-menu {
-    float: right;
-    padding-top: 30px;
-    padding-right: 20px;
-    color: white;
-    text-shadow: 2px 2px #02010A;
-    font-size: 16pt;
 }
 
 #header #main-menu a:visited,
@@ -33,6 +23,14 @@ a:link {
 
 .shadow {
     box-shadow: 5px 5px #02010A;
+}
+
+.nor-menu {
+    text-decoration: underline;
+}
+
+.sel-menu {
+    text-decoration: none;
 }
 
 .center-img-big {
@@ -87,26 +85,85 @@ a:link {
     box-shadow: 2px 2px #82c3a6;
 }
 
-#siteFoot {
-    background-color: #C6d5c5;
-    height: 160px;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.nav-foot {
-    width: 25%;
-}
-
-
-/*
-Para la imagen 1, aplica el efecto blur de 10px.
-Para las imágenes 2,4,6 (pares) aplica escala de grises al 100%.
-Para la imagen 3, aplica el efecto sepia de 90%.
-*/
-
 @media (max-width: 900px) {
     #contenido {
         width: 100%;
+        animation: contentMove 1.5s;
+    }
+    #header #main-menu {
+        float: left;
+        display: block;
+        color: white;
+        text-shadow: 2px 2px #02010A;
+        font-size: 16pt;
+    }
+    #header h1 {
+        width: 100%;
+        text-align: center;
+        line-height: 0.5;
+    }
+    #header #main-menu {
+        width: 100%;
+        text-align: center;
+    }
+    #header #main-menu p {
+        display: inline;
+    }
+    #header #main-menu a {
+        padding-left: 20px;
+    }
+    #main-img {
+        background-color: #82c3a6;
+        padding: 20px;
+    }
+    #sec-img {
+        background-color: #d5c75f;
+        border: 1px solid #d5c75f;
+        width: inherit;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .side-img {
+        padding: 3.5% 3.5% 0% 3.5%;
+    }
+    .side-img p {
+        text-align: center;
+        line-height: 0px;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-decoration: underline;
+    }
+    #siteFoot {
+        background-color: #C6d5c5;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .nav-foot {
+        width: 100%;
+    }
+    .nav-foot h2 {
+        line-height: 0.5;
+    }
+    #siteFoot {
+        padding-left: 5%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #siteFoot ul {
+        list-style-type: none;
+    }
+    #siteFoot ul li {
+        text-indent: -2em;
+    }
+    #flexImg {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .sec-imgs-flex {
+        padding: 5% 5% 1% 5%;
+    }
+    #secBlockImg {
+        background-color: #d5c75f;
+        border: 1px solid #d5c75f;
     }
 }
 
@@ -114,18 +171,24 @@ Para la imagen 3, aplica el efecto sepia de 90%.
     #contenido {
         width: 901px;
         margin: 0 auto;
+        animation: contentMove 1.5s;
+    }
+    #header #main-menu {
+        float: right;
+        padding-top: 30px;
+        padding-right: 20px;
+        color: white;
+        text-shadow: 2px 2px #02010A;
+        font-size: 16pt;
+    }
+    #header h1 {
+        padding-left: 20px;
     }
     #header #main-menu p {
         display: inline;
     }
     #header #main-menu a {
         padding-left: 50px;
-    }
-    .nor-menu {
-        text-decoration: underline;
-    }
-    .sel-menu {
-        text-decoration: none;
     }
     #main-img {
         background-color: #82c3a6;
@@ -174,5 +237,25 @@ Para la imagen 3, aplica el efecto sepia de 90%.
     }
     #siteFoot ul li {
         text-indent: -2em;
+    }
+    #siteFoot {
+        background-color: #C6d5c5;
+        height: 160px;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .nav-foot {
+        width: 25%;
+    }
+}
+
+@-webkit-keyframes contentMove {
+    0% {
+        margin-top: 150%;
+    }
+    60% {
+        margin-top: -5%;
+    }
+    100% {
+        margin-top: 0%;
     }
 }
