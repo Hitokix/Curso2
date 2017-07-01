@@ -47,8 +47,26 @@ a:link {
 }
 
 .center-img-small-flex {
-    width: 33%;
+    width: 100%;
     height: 300px;
+}
+
+.center-img-small-flex-blur {
+    width: 100%;
+    height: 300px;
+    filter: blur(10px);
+}
+
+.center-img-small-flex-grey {
+    width: 100%;
+    height: 300px;
+    filter: grayscale(100%);
+}
+
+.center-img-small-flex-sepia {
+    width: 100%;
+    height: 300px;
+    filter: sepia(90%);
 }
 
 #shakeImg {
@@ -71,10 +89,20 @@ a:link {
 
 #siteFoot {
     background-color: #C6d5c5;
-    height: 150px;
-    margin-top: -20px;
+    height: 160px;
     border-radius: 0px 0px 10px 10px;
 }
+
+.nav-foot {
+    width: 25%;
+}
+
+
+/*
+Para la imagen 1, aplica el efecto blur de 10px.
+Para las imágenes 2,4,6 (pares) aplica escala de grises al 100%.
+Para la imagen 3, aplica el efecto sepia de 90%.
+*/
 
 @media (max-width: 900px) {
     #contenido {
@@ -128,5 +156,23 @@ a:link {
     #flexImg {
         display: flex;
         flex-flow: row nowrap;
+    }
+    .sec-imgs-flex {
+        padding: 2.5% 2.5% 2.5% 2.5%;
+    }
+    #secBlockImg {
+        background-color: #d5c75f;
+        border: 1px solid #d5c75f;
+    }
+    #siteFoot {
+        padding-left: 2.5%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #siteFoot ul {
+        list-style-type: none;
+    }
+    #siteFoot ul li {
+        text-indent: -2em;
     }
 }
